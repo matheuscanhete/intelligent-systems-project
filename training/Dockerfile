@@ -26,6 +26,7 @@ RUN pip install jupyterlab
 # Install Python packages
 ADD requirements.txt .
 RUN pip install -r requirements.txt
+# download stopwords
 RUN python -m nltk.downloader stopwords -d /usr/local/nltk_data
 
 # Add all other files to the container
